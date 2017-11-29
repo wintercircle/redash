@@ -65,7 +65,7 @@
 
     </div>
     <div class="col-sm-3 text-right p-r-0">
-      <span ng-show="query.id && canViewSource">
+      <span ng-show="query.id && canViewSource && currentUser.hasPermission('admin')">
           <a ng-show="!sourceMode"
             ng-href="{{query.getUrl(true, selectedTab)}}" class="btn btn-default">Show Source
           </a>
@@ -147,7 +147,7 @@
                 ng-disabled="queryExecuting || !canExecuteQuery()" title="Refresh Dataset"
                 ng-if="!sourceMode"><span
           class="zmdi zmdi-refresh"></span></button>
-        <div class="btn-group" uib-dropdown>
+        <div ng-if="currentUser.hasPermission('admin')" class="btn-group" uib-dropdown>
           <button type="button" class="btn btn-default btn-sm dropdown-toggle"
                   ng-disabled="queryExecuting || !queryResult.getData()" aria-haspopup="true"
                   uib-dropdown-toggle aria-expanded="false">

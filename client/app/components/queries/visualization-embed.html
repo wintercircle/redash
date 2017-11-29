@@ -25,7 +25,7 @@
         <span class="zmdi zmdi-link"></span>
       </a>
 
-      <div class="btn-group" uib-dropdown>
+      <div ng-if="currentUser.hasPermission('admin')" class="btn-group" uib-dropdown>
         <button type="button" class="btn btn-default btn-xs dropdown-toggle" aria-haspopup="true" uib-dropdown-toggle
                 aria-expanded="false">
           Download Dataset <span class="caret"></span>
