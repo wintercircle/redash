@@ -166,7 +166,7 @@ LOG_LEVEL = os.environ.get("REDASH_LOG_LEVEL", "INFO")
 LOG_STDOUT = parse_boolean(os.environ.get('REDASH_LOG_STDOUT', 'false'))
 LOG_FORMAT = os.environ.get('REDASH_LOG_FORMAT', '[%(asctime)s][PID:%(process)d][%(levelname)s][%(name)s] %(message)s')
 CELERYD_LOG_FORMAT = os.environ.get('REDASH_CELERYD_LOG_FORMAT', '[%(asctime)s][PID:%(process)d][%(levelname)s][%(processName)s] %(message)s')
-CELERYD_TASK_LOG_FORMAT = os.environ.get('REDASH_CELERYD_TASK_LOG_FORMAT', '[%(asctime)s][PID:%(process)d][%(levelname)s][%(processName)s] task_name=%(task_name)s taks_id=%(task_id)s %(message)s')
+CELERYD_TASK_LOG_FORMAT = os.environ.get('REDASH_CELERYD_TASK_LOG_FORMAT', '[%(asctime)s][PID:%(process)d][%(levelname)s][%(processName)s] task_name=%(task_name)s task_id=%(task_id)s %(message)s')
 
 # Mail settings:
 MAIL_SERVER = os.environ.get('REDASH_MAIL_SERVER', 'localhost')
@@ -225,7 +225,8 @@ default_query_runners = [
     'redash.query_runner.google_analytics',
     'redash.query_runner.axibase_tsd',
     'redash.query_runner.salesforce',
-    'redash.query_runner.query_results'
+    'redash.query_runner.query_results',
+    'redash.query_runner.qubole'
 ]
 
 enabled_query_runners = array_from_string(os.environ.get("REDASH_ENABLED_QUERY_RUNNERS", ",".join(default_query_runners)))
