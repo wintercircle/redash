@@ -43,7 +43,7 @@ function getDefaultColumnsOptions(columns) {
     order: 100000 + index,
     title: getColumnCleanName(col.name),
     allowSearch: false,
-    allowHTML: false,
+    allowHTML: true,
     highlightLinks: false,
     alignContent: getColumnContentAlignment(col.type),
   }));
