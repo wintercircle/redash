@@ -271,12 +271,12 @@
                 </a>
               </li>
               <li>
-                <a query-result-link target="_self" ng-disabled="queryExecuting || !queryResult.getData()">
+                <a ng-if="currentUser.hasPermission('admin')" query-result-link target="_self" ng-disabled="queryExecuting || !queryResult.getData()">
                   <span class="fa fa-file-o"></span> Download as CSV File
                 </a>
               </li>
               <li>
-                <a query-result-link file-type="xlsx" target="_self" ng-disabled="queryExecuting || !queryResult.getData()">
+                <a ng-if="currentUser.hasPermission('admin')" query-result-link file-type="xlsx" target="_self" ng-disabled="queryExecuting || !queryResult.getData()">
                   <span class="fa fa-file-excel-o"></span> Download as Excel File
                 </a>
               </li>
