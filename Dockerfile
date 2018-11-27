@@ -1,4 +1,7 @@
 FROM redash/base:latest
+# from redash/base WORKDIR /app
+# Install ssm-env
+COPY --from=wintercircle/docker-ssm-env /usr/bin/ssm-env /usr/bin/ssm-env
 
 # We first copy only the requirements file, to avoid rebuilding on every file
 # change.
