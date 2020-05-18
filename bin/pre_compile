@@ -11,6 +11,7 @@ pushd $DIR/..
 
 # Remove Heroku unsupported Python packages:
 grep -v -E "^(pymssql|thrift|sasl|pyhive)" requirements_all_ds.txt >> requirements.txt
+echo "oauthlib==2.0.6" >> requirements.txt
 
 # make the heroku Procfile the active one
 cp Procfile.heroku Procfile
