@@ -1,0 +1,35 @@
+{
+  "name": "Redash",
+  "scripts": {
+    "postdeploy": "/app/manage.py database create_tables"
+  },
+  "env": {
+    "REDASH_LOG_LEVEL": {
+      "description": "Redash log level",
+      "value": "INFO",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": {
+        "version": "12"
+      }
+    },
+    {
+      "plan": "rediscloud:30"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
