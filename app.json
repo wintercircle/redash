@@ -12,6 +12,27 @@
     "REDASH_COOKIE_SECRET": {
       "description": "The secret key to use in the Flask app for various cryptographic features",
       "generator": "secret"
+    },
+    "REDASH_MAIL_SERVER": {
+      "value": "email-smtp.us-east-1.amazonaws.com",
+      "required": false
+    },
+    "REDASH_MAIL_PORT": {
+      "value": "25",
+      "required": false
+    },
+    "REDASH_MAIL_USE_TLS": {
+      "value": "true",
+      "required": false
+    },
+    "REDASH_MAIL_USERNAME": {
+      "required": false
+    },
+    "REDASH_MAIL_PASSWORD": {
+      "required": false
+    },
+    "REDASH_MAIL_DEFAULT_SENDER": {
+      "required": false
     }
   },
   "formation": {
