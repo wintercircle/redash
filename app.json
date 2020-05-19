@@ -8,6 +8,10 @@
       "description": "Redash log level",
       "value": "INFO",
       "required": false
+    },
+    "REDASH_COOKIE_SECRET": {
+      "description": "The secret key to use in the Flask app for various cryptographic features",
+      "generator": "secret"
     }
   },
   "formation": {
