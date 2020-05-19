@@ -33,6 +33,12 @@
     },
     "REDASH_MAIL_DEFAULT_SENDER": {
       "required": false
+    },
+    "REDASH_GOOGLE_CLIENT_ID": {
+      "required": false
+    },
+    "REDASH_GOOGLE_CLIENT_SECRET": {
+      "required": false
     }
   },
   "formation": {
