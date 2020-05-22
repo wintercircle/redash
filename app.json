@@ -4,6 +4,9 @@
     "postdeploy": "REDASH_DATABASE_URL=$DATABASE_URL REDASH_REDIS_URL=$REDISCLOUD_URL /app/manage.py database create_tables"
   },
   "env": {
+    "REDASH_HOST": {
+      "description": "URL to access redash"
+    },
     "REDASH_LOG_LEVEL": {
       "description": "Redash log level",
       "value": "INFO",
